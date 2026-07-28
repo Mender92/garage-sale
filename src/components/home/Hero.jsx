@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section from "../layout/Section";
-import heroImage from "../../assets/Hero.png";
+import heroImage from "../../assets/hero.png";
 
 function Hero() {
   return (
