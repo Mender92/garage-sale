@@ -5,17 +5,19 @@ import products from "../data/products";
 function GarageSale() {
   return (
     <Section>
-      <h1 className="text-4xl font-bold">
-        Garage Sale
-      </h1>
+      <div className="max-w-6xl">
+        <h1 className="text-5xl font-bold mb-12">
+          Garage Sale
+        </h1>
 
-      <div className="grid md:grid-cols-2 gap-8 mt-10">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-          />
-        ))}
+        <div className="flex flex-wrap gap-8">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+            />
+          ))}
+        </div>
       </div>
     </Section>
   );

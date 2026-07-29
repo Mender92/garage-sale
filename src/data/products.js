@@ -12,11 +12,11 @@ const products = [
   },
   {
     id: 2,
-    title: "Guitar Case",
-    price: "€80",
+    title: "Travel Suitcase",
+    price: "€20",
     image: caseImage,
     description:
-      "Durable hard guitar case that provides excellent protection during transport and storage.",
+      "Well-maintained travel suitcase in good condition. Spacious, lightweight, and easy to maneuver thanks to its smooth-rolling wheels. Perfect for vacations, business trips, or weekend getaways. Fully functional with normal signs of use.",
   },
 ];
 

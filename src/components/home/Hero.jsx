@@ -27,7 +27,7 @@ function Hero() {
           <p className="mt-2 max-w-xl text-xl leading-10">
             Here you'll find a few things from my apartment that I no longer
             use but are still in great shape and ready for a new home. Feel
-            free to browse around—who knows, maybe something here is just what
+            free to browse around, maybe something here is just what
             you need.
           </p>
 
