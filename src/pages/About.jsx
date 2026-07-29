@@ -8,7 +8,7 @@ function About() {
       <div className="grid lg:grid-cols-2 items-center gap-20">
         <div>
           <h1 className="text-5xl font-bold">
-            About Me
+            About Project
           </h1>
 
           <p className="mt-2 max-w-xl text-xl leading-10">
