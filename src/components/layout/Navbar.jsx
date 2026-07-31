@@ -32,7 +32,7 @@ function Navbar() {
           </li>
 
           <li>
-            <NavLink to="/about">About Project</NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
         </ul>
       </nav>
@@ -74,7 +74,7 @@ function Navbar() {
 
               <li>
                 <NavLink to="/about" onClick={closeMenu}>
-                  About Project
+                  About
                 </NavLink>
               </li>
 
