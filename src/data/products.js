@@ -1,6 +1,7 @@
 import caseImage from "../assets/images/case.jpeg";
 import guitarImage from "../assets/images/guitar.jpeg";
 import snusImage from "../assets/images/snus.jpeg";
+import thinkpadImage from "../assets/images/thinkpad.jpeg";
 
 const products = [
   {
@@ -25,7 +26,15 @@ const products = [
     price: "€5/can",
     image: snusImage,
     description:
-      "Accidentally purchased nicotine pouches instead of energy pouches. The price is 5€/can when buying all 20 cans together. Otherwise, the price is 6€/can. All cans are unopened and in perfect condition.",
+      "Accidentally purchased nicotine pouches instead of tobacco snus. €5 per can when buying all 20 cans together. Otherwise, the price is €6 per can. All cans are unopened and in perfect condition.",
+  },
+  {
+    id: 4,
+    title: "Lenovo ThinkPad X250",
+    price: "€100",
+    image: thinkpadImage,
+    description:
+      "Well-maintained Lenovo ThinkPad X250 laptop with a fast SSD for responsive performance. Ideal for work, school, web browsing and everyday use. Selling because I no longer need it.",
   },
 ];
 
