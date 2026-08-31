@@ -34,12 +34,16 @@ function Product() {
     <Section>
       <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-        <img
-          src={product.image}
-          alt={product.title}
-          className="w-full rounded-2xl object-cover"
-        />
+        {/* Product image */}
+        <div className="flex justify-center">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-2/3 rounded-2xl object-cover"
+          />
+        </div>
 
+        {/* Product information */}
         <div>
           <h1 className="text-5xl font-bold">
             {product.title}

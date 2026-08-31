@@ -8,6 +8,9 @@ import GarageSale from "./pages/GarageSale";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 
+console.log("Product:", Product);
+console.log("Type of Product:", typeof Product);
+
 function App() {
   return (
     <Routes>

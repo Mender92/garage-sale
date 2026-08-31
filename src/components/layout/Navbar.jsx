@@ -31,7 +31,7 @@ function Navbar() {
             </li>
 
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">About project</NavLink>
             </li>
           </ul>
         </nav>
@@ -49,14 +49,14 @@ function Navbar() {
           type="button"
           className="md:hidden text-3xl"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Open menu"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? "✕" : "☰"}
         </button>
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 w-full bg-[#F7E4AE] shadow-lg rounded-2xl p-6 md:hidden z-50">
+          <div className="absolute top-full left-0 w-full bg-[#FFEDBA] shadow-lg rounded-2xl p-6 md:hidden z-50">
             <nav>
               <ul className="flex flex-col gap-6 text-lg">
                 <li>
@@ -73,7 +73,7 @@ function Navbar() {
 
                 <li>
                   <NavLink to="/about" onClick={closeMenu}>
-                    About
+                    About project
                   </NavLink>
                 </li>
 
