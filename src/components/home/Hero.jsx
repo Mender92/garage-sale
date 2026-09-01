@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import Section from "../layout/Section";
 import heroImage from "../../assets/hero.png";
+import translations from "../../data/translations";
 
 function Hero() {
+  const { language } = useOutletContext();
+  const t = translations[language].home;
+
   return (
     <Section>
       <div className="grid lg:grid-cols-2 items-center gap-20">
@@ -10,25 +14,22 @@ function Hero() {
         <div>
           <div className="flex items-start gap-6">
             <h1 className="text-8xl lg:text-9xl font-black leading-none">
-              Hi,
+              {t.greeting}
             </h1>
 
             <div className="pt-2">
               <p className="text-3xl lg:text-4xl font-medium">
-                my name
+                {t.myName}
               </p>
 
               <h2 className="text-5xl lg:text-6xl font-semibold mt-2">
-                is Domen.
+                {t.name}
               </h2>
             </div>
           </div>
 
           <p className="mt-2 max-w-xl text-xl leading-10">
-            Here you'll find a few things from my apartment that I no longer
-            use but are still in great shape and ready for a new home. Feel
-            free to browse around, maybe something here is just what
-            you need.
+            {t.description}
           </p>
 
           <div className="mt-6 flex flex-wrap gap-6">
@@ -36,14 +37,14 @@ function Hero() {
               to="/garage-sale"
               className="rounded-full bg-black text-white px-10 py-4 text-lg transition hover:opacity-90"
             >
-              Garage Sale
+              {t.garageSaleButton}
             </Link>
 
             <Link
               to="/about"
               className="rounded-full border border-black px-10 py-4 text-lg transition hover:bg-black hover:text-white"
             >
-              About Project
+              {t.aboutButton}
             </Link>
           </div>
         </div>

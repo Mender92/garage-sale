@@ -1,17 +1,21 @@
+import { useOutletContext } from "react-router-dom";
 import Section from "../components/layout/Section";
 import { FaInstagram } from "react-icons/fa";
+import translations from "../data/translations";
 
 function Contact() {
+  const { language } = useOutletContext();
+  const t = translations[language].contact;
+
   return (
     <Section>
       <div className="max-w-2xl mx-auto text-center">
         <h1 className="text-5xl font-bold">
-          Contact Me
+          {t.title}
         </h1>
 
         <p className="mt-8 text-lg leading-8">
-          If you're interested in working together or have a question about an
-          item from my Garage Sale, feel free to contact me on Instagram.
+          {t.description}
         </p>
 
         <a

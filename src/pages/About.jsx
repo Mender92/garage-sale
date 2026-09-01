@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import Section from "../components/layout/Section";
 import profileImage from "../assets/profile.jpeg";
+import translations from "../data/translations";
 
 function About() {
   const [showMore, setShowMore] = useState(false);
+  const { language } = useOutletContext();
+
+  const t = translations[language].about;
 
   return (
     <Section>
@@ -12,21 +17,19 @@ function About() {
         {/* Text content */}
         <div>
           <h1 className="text-5xl font-bold">
-            About Project
+            {t.title}
           </h1>
 
           {/* Intro */}
           <p className="mt-8 max-w-xl text-xl leading-10">
-            Garage Sale is a personal project where I sell things I no longer
-            need, while using the project as an opportunity to learn and
-            practice building digital products.{" "}
+            {t.intro}{" "}
 
             <button
               type="button"
               onClick={() => setShowMore(!showMore)}
               className="font-bold text-gray-500 hover:text-gray-700 transition"
             >
-              {showMore ? "Less" : "More"}
+              {showMore ? t.less : t.more}
             </button>
           </p>
 
@@ -35,20 +38,15 @@ function About() {
             <div className="mt-6 max-w-xl text-xl leading-10">
 
               <p>
-                This project is also part of my journey as a UX Designer. I
-                want to better understand what happens beyond the design
-                process and learn how digital products are actually built.
+                {t.paragraph1}
               </p>
 
               <p className="mt-6">
-                As part of that learning process, I am learning the fundamentals
-                of front-end development, React and JavaScript.
+                {t.paragraph2}
               </p>
 
               <p className="mt-6">
-                Garage Sale is therefore a combination of something practical
-                and something I enjoy. You can see more of my work on Dribbble,
-                and I'm always open to feedback on LinkedIn.
+                {t.paragraph3}
               </p>
 
               {/* Social links */}
@@ -59,7 +57,7 @@ function About() {
                   rel="noopener noreferrer"
                   className="rounded-full bg-black text-white px-6 py-3 hover:opacity-80 transition"
                 >
-                  LinkedIn
+                  {t.linkedin}
                 </a>
 
                 <a
@@ -68,7 +66,7 @@ function About() {
                   rel="noopener noreferrer"
                   className="rounded-full border border-[#1F1F1F] px-6 py-3 hover:bg-black hover:text-white transition"
                 >
-                  Dribbble
+                  {t.dribbble}
                 </a>
               </div>
 
@@ -80,7 +78,7 @@ function About() {
         <div className="overflow-hidden rounded-2xl">
           <img
             src={profileImage}
-            alt="Domen"
+            alt={t.imageAlt}
             className="w-2/3 rounded-2xl object-cover"
           />
         </div>

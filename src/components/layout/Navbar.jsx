@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import translations from "../../data/translations";
 
-function Navbar() {
+function Navbar({ language, setLanguage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
+
+  const t = translations[language].nav;
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#FFEDBA] z-50">
@@ -23,26 +26,58 @@ function Navbar() {
         <nav className="hidden md:block">
           <ul className="flex gap-10 text-[16px] font-normal">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">{t.home}</NavLink>
             </li>
 
             <li>
-              <NavLink to="/garage-sale">Garage Sale</NavLink>
+              <NavLink to="/garage-sale">{t.garageSale}</NavLink>
             </li>
 
             <li>
-              <NavLink to="/about">About project</NavLink>
+              <NavLink to="/about">{t.about}</NavLink>
             </li>
           </ul>
         </nav>
 
-        {/* Desktop contact button */}
-        <NavLink
-          to="/contact"
-          className="hidden md:block border border-[#1F1F1F] rounded-full px-7 py-3 hover:bg-[#1F1F1F] hover:text-white transition"
-        >
-          Contact Me
-        </NavLink>
+        {/* Right side */}
+        <div className="hidden md:flex items-center gap-6">
+          {/* Language switcher */}
+          <div className="flex items-center gap-2 text-[16px]">
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              className={
+                language === "en"
+                  ? "font-bold"
+                  : "text-gray-500 hover:text-[#1F1F1F] transition"
+              }
+            >
+              EN
+            </button>
+
+            <span className="text-gray-400">|</span>
+
+            <button
+              type="button"
+              onClick={() => setLanguage("sl")}
+              className={
+                language === "sl"
+                  ? "font-bold"
+                  : "text-gray-500 hover:text-[#1F1F1F] transition"
+              }
+            >
+              SLO
+            </button>
+          </div>
+
+          {/* Contact button */}
+          <NavLink
+            to="/contact"
+            className="border border-[#1F1F1F] rounded-full px-7 py-3 hover:bg-[#1F1F1F] hover:text-white transition"
+          >
+            {t.contact}
+          </NavLink>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -61,19 +96,19 @@ function Navbar() {
               <ul className="flex flex-col gap-6 text-lg">
                 <li>
                   <NavLink to="/" onClick={closeMenu}>
-                    Home
+                    {t.home}
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink to="/garage-sale" onClick={closeMenu}>
-                    Garage Sale
+                    {t.garageSale}
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink to="/about" onClick={closeMenu}>
-                    About project
+                    {t.about}
                   </NavLink>
                 </li>
 
@@ -83,8 +118,37 @@ function Navbar() {
                     onClick={closeMenu}
                     className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-center"
                   >
-                    Contact Me
+                    {t.contact}
                   </NavLink>
+                </li>
+
+                {/* Mobile language switcher */}
+                <li className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setLanguage("en")}
+                    className={
+                      language === "en"
+                        ? "font-bold"
+                        : "text-gray-500"
+                    }
+                  >
+                    EN
+                  </button>
+
+                  <span className="text-gray-400">|</span>
+
+                  <button
+                    type="button"
+                    onClick={() => setLanguage("sl")}
+                    className={
+                      language === "sl"
+                        ? "font-bold"
+                        : "text-gray-500"
+                    }
+                  >
+                    SLO
+                  </button>
                 </li>
               </ul>
             </nav>
