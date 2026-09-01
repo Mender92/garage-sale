@@ -24,10 +24,8 @@ const translations = {
       more: "More",
       less: "Less",
       paragraph1:
-        "This project is also part of my journey as a UX Designer. I want to better understand what happens beyond the design process and learn how digital products are actually built.",
+        "This project is also part of my journey as a UX Designer. I want to better understand what happens beyond the design process and learn fundamentals of frontend development (so far with React and JavaScript).",
       paragraph2:
-        "As part of that learning process, I am learning the fundamentals of front-end development, React and JavaScript.",
-      paragraph3:
         "Garage Sale is therefore a combination of something practical and something I enjoy. You can see more of my work on Dribbble, and I'm always open to feedback on LinkedIn.",
       linkedin: "LinkedIn",
       dribbble: "Dribbble",
@@ -68,15 +66,13 @@ const translations = {
     about: {
       title: "O projektu",
       intro:
-        "Garage Sale je osebni projekt, kjer prodajam stvari, ki jih ne potrebujem več, hkrati pa ga uporabljam kot priložnost za učenje in razvoj digitalnih produktov.",
+        "Garage Sale je osebni projekt, kjer prodajam artikle, ki jih ne potrebujem več, hkrati pa ga uporabljam kot priložnost za učenje in razvoj digitalnih produktov.",
       more: "Več",
       less: "Manj",
       paragraph1:
-        "Ta projekt je tudi del moje poti kot UX Designer. Želim bolje razumeti, kaj se dogaja poleg procesa oblikovanja, in se naučiti, kako so digitalni produkti dejansko razviti.",
+        "Projekt je tudi del moje poti kot UX Designer, ker želim bolje razumeti, kaj se dogaja v ozadju razvoja digitalnih produktov, poleg procesa oblikovanja. V sklopu tega pa spoznavam osnove frontend-a (Reacta in JavaScripta).",
       paragraph2:
-        "V sklopu tega učenja spoznavam osnove front-end razvoja, Reacta in JavaScripta.",
-      paragraph3:
-        "Garage Sale je zato kombinacija nečesa praktičnega in nečesa, kar uživam ustvarjati. Več mojih projektov si lahko ogledate na Dribbblu, za feedback pa sem dosegljiv na LinkedInu.",
+        "Garage Sale je zato kombinacija nečesa praktičnega in nečesa v čemer uživam in ustvarjam. Več mojih projektov si lahko ogledate na Dribbblu, za feedback pa sem dosegljiv na LinkedInu.",
       linkedin: "LinkedIn",
       dribbble: "Dribbble",
       imageAlt: "Domen",
