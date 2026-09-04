@@ -18,7 +18,7 @@ function Hero() {
             </h1>
 
             <div className="pt-2">
-              <p className="text-3xl lg:text-4xl font-medium">
+              <p className="text-3xl lg:text-4xl font-medium translate-y-2">
                 {t.myName}
               </p>
 
@@ -28,7 +28,7 @@ function Hero() {
             </div>
           </div>
 
-          <p className="mt-2 max-w-xl text-xl leading-10">
+          <p className="mt-8 max-w-xl text-xl leading-10">
             {t.description}
           </p>
 

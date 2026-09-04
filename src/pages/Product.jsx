@@ -53,6 +53,12 @@ function Product() {
             {product.price}
           </p>
 
+          {product.minimumOrder && (
+            <p className="mt-2 text-sm text-gray-500">
+              {product.minimumOrder[language]}
+            </p>
+          )}
+
           <p className="mt-8 leading-8 text-lg">
             {product.description[language]}
           </p>
