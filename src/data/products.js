@@ -43,8 +43,8 @@ const products = [
     price: "€5/can",
     image: snusImage,
     description: {
-      en: "Accidentally purchased nicotine pouches instead of tobacco snus. I have 20 cans available in total. €5 per can when buying all 20 cans together. Otherwise, the price is €6 per can. All cans are unopened and in perfect condition.",
-      sl: "Po pomoti sem kupil nikotinske vrečke namesto tobačnega snusa. Skupaj imam na voljo 20 škatel. Cena je 5 € na škatlo pri nakupu vseh 20 škatel skupaj. Sicer je cena 6 € na škatlo. Vse škatle so neodprte in v brezhibnem stanju.",
+      en: "Each can contains 20 pouches and is available in 6 mg or 12 mg nicotine per pouch. The pouches use plant-based fibres and are tobacco-free. Unopened and in perfect condition. Selling because I accidentally bought nicotine pouches instead of energy pouches.",
+      sl: "OutDare nikotinske vrečke z okusom mentola. V eni škatli je 20 vrečk (6mg nikotina/vrečko), ki vsebujejo rastlinska vlakna in so brez tobaka. Škatle so neodprte in v brezhibnem stanju. Prodajam, ker sem pomotoma kupil nikotinske namesto energijskih.",
     },
   },
 

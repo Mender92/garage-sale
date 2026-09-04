@@ -20,7 +20,7 @@ const translations = {
     about: {
       title: "About Project",
       intro:
-        "Garage Sale is a personal project where I sell things I no longer need, while using the project as an opportunity to learn and practice building digital products.",
+        "Hi, I am Domen and Garage Sale is a personal project where I sell things I no longer need, while using the project as an opportunity to learn and practice building digital products.",
       more: "More",
       less: "Less",
       paragraph1:
@@ -66,7 +66,7 @@ const translations = {
     about: {
       title: "O projektu",
       intro:
-        "Garage Sale je osebni projekt, kjer prodajam artikle, ki jih ne potrebujem več, hkrati pa ga uporabljam kot priložnost za učenje in razvoj digitalnih produktov.",
+        "Živjo! Sem Domen in Garage Sale je osebni projekt, kjer prodajam artikle, ki jih ne potrebujem več, hkrati pa ga uporabljam kot priložnost za učenje in razvoj digitalnih produktov.",
       more: "Več",
       less: "Manj",
       paragraph1:
