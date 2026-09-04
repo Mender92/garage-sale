@@ -35,17 +35,22 @@ const products = [
   },
 
   {
-    id: 3,
-    title: {
-      en: "Outdare Nicotine Pouches",
-      sl: "Outdare nikotinske vrečke",
-    },
-    price: "€5/can",
-    image: snusImage,
-    description: {
-      en: "Each can contains 20 pouches and is available in 6 mg or 12 mg nicotine per pouch. The pouches use plant-based fibres and are tobacco-free. Unopened and in perfect condition. Selling because I accidentally bought nicotine pouches instead of energy pouches.",
-      sl: "OutDare nikotinske vrečke z okusom mentola. V eni škatli je 20 vrečk (6mg nikotina/vrečko), ki vsebujejo rastlinska vlakna in so brez tobaka. Škatle so neodprte in v brezhibnem stanju. Prodajam, ker sem pomotoma kupil nikotinske namesto energijskih.",
-    },
+  id: 3,
+  title: {
+    en: "Outdare Nicotine Pouches",
+    sl: "Outdare nikotinske vrečke",
+  },
+  price: "€5/can",
+  minimumOrder: {
+    en: "Minimum order: 5 cans",
+    sl: "Minimalno naročilo: 5 škatel",
+  },
+  image: snusImage,
+  description: {
+    en: "Each can contains 20 pouches and is available in 6 mg/pouch. The pouches use plant-based fibres and are tobacco-free. Unopened and in perfect condition. Selling because I accidentally bought nicotine instead of energy pouches.",
+
+    sl: "OutDare nikotinske vrečke z okusom mentola. V eni škatli je 20 vrečk (6mg nikotina/vrečko), ki vsebujejo rastlinska vlakna in so brez tobaka. Škatle so neodprte in v brezhibnem stanju. Prodajam, ker sem pomotoma kupil nikotinske namesto energijskih vrečk.",
+  },
   },
 
   {
