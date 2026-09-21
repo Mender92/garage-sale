@@ -25,7 +25,7 @@ function Navbar({ language, setLanguage }) {
 
         {/* Desktop navigation */}
         <nav className="hidden md:block">
-          <ul className="flex gap-10 text-[14px] font-bold uppercase tracking-wide">
+          <ul className="flex gap-10 text-[16px] font-bold tracking-wide">
 
             <li>
               <NavLink
@@ -94,7 +94,7 @@ function Navbar({ language, setLanguage }) {
           {/* Contact */}
           <NavLink
             to="/contact"
-            className="border border-[#1F1F1F] rounded-full px-7 py-3 text-[14px] font-bold uppercase tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
+            className="border border-[#1F1F1F] rounded-full px-7 py-3 text-[14px] font-bold tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
           >
             {t.contact}
           </NavLink>
@@ -116,7 +116,7 @@ function Navbar({ language, setLanguage }) {
           <div className="absolute top-full left-0 w-full bg-[#FFEDBA] shadow-lg rounded-2xl p-6 md:hidden z-50">
 
             <nav>
-              <ul className="flex flex-col gap-6 text-[14px] font-bold uppercase tracking-wide">
+              <ul className="flex flex-col gap-6 text-[16px] font-bold tracking-wide">
 
                 <li>
                   <NavLink
@@ -185,7 +185,7 @@ function Navbar({ language, setLanguage }) {
                   <NavLink
                     to="/contact"
                     onClick={closeMenu}
-                    className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-[14px] uppercase tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
+                    className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-center text-[14px] tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
                   >
                     {t.contact}
                   </NavLink>
