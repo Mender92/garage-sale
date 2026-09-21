@@ -79,7 +79,7 @@ function About() {
           <img
             src={profileImage}
             alt={t.imageAlt}
-            className="w-2/3 rounded-2xl object-cover"
+            className="w-2/3 rounded-2xl object-cover transition-transform duration-300 hover:scale-[1.02]"
           />
         </div>
 

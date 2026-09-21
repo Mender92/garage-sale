@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./components/layout/Layout";
@@ -8,13 +9,19 @@ import GarageSale from "./pages/GarageSale";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 
-console.log("Product:", Product);
-console.log("Type of Product:", typeof Product);
-
 function App() {
+  const [language, setLanguage] = useState("en");
+
   return (
     <Routes>
-      <Route element={<Layout />}>
+      <Route
+        element={
+          <Layout
+            language={language}
+            setLanguage={setLanguage}
+          />
+        }
+      >
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/garage-sale" element={<GarageSale />} />

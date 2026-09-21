@@ -13,6 +13,7 @@ function Navbar({ language, setLanguage }) {
   return (
     <header className="fixed top-0 left-0 w-full bg-[#FFEDBA] z-50">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-24">
+
         {/* Logo */}
         <NavLink to="/" onClick={closeMenu}>
           <img
@@ -24,62 +25,83 @@ function Navbar({ language, setLanguage }) {
 
         {/* Desktop navigation */}
         <nav className="hidden md:block">
-          <ul className="flex gap-10 text-[16px] font-normal">
+          <ul className="flex gap-10 text-[14px] font-bold uppercase tracking-wide">
+
             <li>
-              <NavLink to="/">{t.home}</NavLink>
+              <NavLink
+                to="/"
+                className="transition-opacity duration-200 hover:opacity-60"
+              >
+                {t.home}
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/garage-sale">{t.garageSale}</NavLink>
+              <NavLink
+                to="/garage-sale"
+                className="transition-opacity duration-200 hover:opacity-60"
+              >
+                {t.garageSale}
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/about">{t.about}</NavLink>
+              <NavLink
+                to="/about"
+                className="transition-opacity duration-200 hover:opacity-60"
+              >
+                {t.about}
+              </NavLink>
             </li>
+
           </ul>
         </nav>
 
-        {/* Right side */}
+        {/* Language + Contact */}
         <div className="hidden md:flex items-center gap-6">
-          {/* Language switcher */}
-          <div className="flex items-center gap-2 text-[16px]">
-            <button
-              type="button"
-              onClick={() => setLanguage("en")}
-              className={
-                language === "en"
-                  ? "font-bold"
-                  : "text-gray-500 hover:text-[#1F1F1F] transition"
-              }
-            >
-              EN
-            </button>
 
-            <span className="text-gray-400">|</span>
+          {/* Language switcher */}
+          <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide">
 
             <button
               type="button"
               onClick={() => setLanguage("sl")}
-              className={
+              className={`transition-opacity duration-200 ${
                 language === "sl"
-                  ? "font-bold"
-                  : "text-gray-500 hover:text-[#1F1F1F] transition"
-              }
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-70"
+              }`}
             >
               SLO
             </button>
+
+            <span>|</span>
+
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              className={`transition-opacity duration-200 ${
+                language === "en"
+                  ? "opacity-100"
+                  : "opacity-40 hover:opacity-70"
+              }`}
+            >
+              ENG
+            </button>
+
           </div>
 
-          {/* Contact button */}
+          {/* Contact */}
           <NavLink
             to="/contact"
-            className="border border-[#1F1F1F] rounded-full px-7 py-3 hover:bg-[#1F1F1F] hover:text-white transition"
+            className="border border-[#1F1F1F] rounded-full px-7 py-3 text-[14px] font-bold uppercase tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
           >
             {t.contact}
           </NavLink>
+
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile menu button */}
         <button
           type="button"
           className="md:hidden text-3xl"
@@ -92,68 +114,89 @@ function Navbar({ language, setLanguage }) {
         {/* Mobile menu */}
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-[#FFEDBA] shadow-lg rounded-2xl p-6 md:hidden z-50">
+
             <nav>
-              <ul className="flex flex-col gap-6 text-lg">
+              <ul className="flex flex-col gap-6 text-[14px] font-bold uppercase tracking-wide">
+
                 <li>
-                  <NavLink to="/" onClick={closeMenu}>
+                  <NavLink
+                    to="/"
+                    onClick={closeMenu}
+                    className="transition-opacity duration-200 hover:opacity-60"
+                  >
                     {t.home}
                   </NavLink>
                 </li>
 
                 <li>
-                  <NavLink to="/garage-sale" onClick={closeMenu}>
+                  <NavLink
+                    to="/garage-sale"
+                    onClick={closeMenu}
+                    className="transition-opacity duration-200 hover:opacity-60"
+                  >
                     {t.garageSale}
                   </NavLink>
                 </li>
 
                 <li>
-                  <NavLink to="/about" onClick={closeMenu}>
+                  <NavLink
+                    to="/about"
+                    onClick={closeMenu}
+                    className="transition-opacity duration-200 hover:opacity-60"
+                  >
                     {t.about}
                   </NavLink>
+                </li>
+
+                {/* Language */}
+                <li>
+                  <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide">
+
+                    <button
+                      type="button"
+                      onClick={() => setLanguage("sl")}
+                      className={`transition-opacity duration-200 ${
+                        language === "sl"
+                          ? "opacity-100"
+                          : "opacity-40"
+                      }`}
+                    >
+                      SLO
+                    </button>
+
+                    <span>|</span>
+
+                    <button
+                      type="button"
+                      onClick={() => setLanguage("en")}
+                      className={`transition-opacity duration-200 ${
+                        language === "en"
+                          ? "opacity-100"
+                          : "opacity-40"
+                      }`}
+                    >
+                      ENG
+                    </button>
+
+                  </div>
                 </li>
 
                 <li>
                   <NavLink
                     to="/contact"
                     onClick={closeMenu}
-                    className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-center"
+                    className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-[14px] uppercase tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
                   >
                     {t.contact}
                   </NavLink>
                 </li>
 
-                {/* Mobile language switcher */}
-                <li className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setLanguage("en")}
-                    className={
-                      language === "en"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }
-                  >
-                    EN
-                  </button>
-
-                  <span className="text-gray-400">|</span>
-
-                  <button
-                    type="button"
-                    onClick={() => setLanguage("sl")}
-                    className={
-                      language === "sl"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }
-                  >
-                    SLO
-                  </button>
-                </li>
               </ul>
             </nav>
+
           </div>
         )}
+
       </div>
     </header>
   );
