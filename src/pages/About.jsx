@@ -45,10 +45,6 @@ function About() {
                 {t.paragraph2}
               </p>
 
-              <p className="mt-6">
-                {t.paragraph3}
-              </p>
-
               {/* Social links */}
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
