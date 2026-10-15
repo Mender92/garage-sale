@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
-import Section from "../components/layout/Section";
 import { FaInstagram } from "react-icons/fa";
+import Section from "../components/layout/Section";
+import Button from "../components/ui/Button";
 import translations from "../data/translations";
 
 function Contact() {
@@ -18,15 +19,15 @@ function Contact() {
           {t.description}
         </p>
 
-        <a
+        <Button
           href="https://www.instagram.com/domen_kjuder/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-12 inline-flex items-center gap-3 rounded-full border border-black px-8 py-4 transition hover:bg-black hover:text-white"
+          className="mt-12 gap-3 px-8 py-4"
         >
           <FaInstagram className="text-2xl" />
           @domen_kjuder
-        </a>
+        </Button>
       </div>
     </Section>
   );

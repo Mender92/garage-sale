@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import translations from "../../data/translations";
+import Button from "../ui/Button";
 
 function Navbar({ language, setLanguage }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,6 @@ function Navbar({ language, setLanguage }) {
         {/* Desktop navigation */}
         <nav className="hidden md:block">
           <ul className="flex gap-10 text-[16px] font-bold tracking-wide">
-
             <li>
               <NavLink
                 to="/"
@@ -53,7 +53,6 @@ function Navbar({ language, setLanguage }) {
                 {t.about}
               </NavLink>
             </li>
-
           </ul>
         </nav>
 
@@ -62,7 +61,6 @@ function Navbar({ language, setLanguage }) {
 
           {/* Language switcher */}
           <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide">
-
             <button
               type="button"
               onClick={() => setLanguage("sl")}
@@ -88,17 +86,12 @@ function Navbar({ language, setLanguage }) {
             >
               ENG
             </button>
-
           </div>
 
           {/* Contact */}
-          <NavLink
-            to="/contact"
-            className="border border-[#1F1F1F] rounded-full px-7 py-3 text-[14px] font-bold tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
-          >
+          <Button to="/contact" className="tracking-wide">
             {t.contact}
-          </NavLink>
-
+          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -107,6 +100,7 @@ function Navbar({ language, setLanguage }) {
           className="md:hidden text-3xl"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
         >
           {isOpen ? "✕" : "☰"}
         </button>
@@ -114,10 +108,8 @@ function Navbar({ language, setLanguage }) {
         {/* Mobile menu */}
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-[#FFEDBA] shadow-lg rounded-2xl p-6 md:hidden z-50">
-
             <nav>
               <ul className="flex flex-col gap-6 text-[16px] font-bold tracking-wide">
-
                 <li>
                   <NavLink
                     to="/"
@@ -151,7 +143,6 @@ function Navbar({ language, setLanguage }) {
                 {/* Language */}
                 <li>
                   <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide">
-
                     <button
                       type="button"
                       onClick={() => setLanguage("sl")}
@@ -177,26 +168,23 @@ function Navbar({ language, setLanguage }) {
                     >
                       ENG
                     </button>
-
                   </div>
                 </li>
 
+                {/* Contact */}
                 <li>
-                  <NavLink
+                  <Button
                     to="/contact"
                     onClick={closeMenu}
-                    className="inline-block border border-[#1F1F1F] rounded-full px-6 py-3 text-center text-[14px] tracking-wide transition-all duration-200 hover:bg-[#1F1F1F] hover:text-white"
+                    className="w-full tracking-wide"
                   >
                     {t.contact}
-                  </NavLink>
+                  </Button>
                 </li>
-
               </ul>
             </nav>
-
           </div>
         )}
-
       </div>
     </header>
   );

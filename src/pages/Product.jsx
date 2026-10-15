@@ -1,5 +1,6 @@
 import { Link, useOutletContext, useParams } from "react-router-dom";
 import Section from "../components/layout/Section";
+import Button from "../components/ui/Button";
 import products from "../data/products";
 import translations from "../data/translations";
 
@@ -24,12 +25,9 @@ function Product() {
           The product you are looking for does not exist.
         </p>
 
-        <Link
-          to="/garage-sale"
-          className="inline-block mt-8 border rounded-full px-6 py-3"
-        >
+        <Button to="/garage-sale" className="mt-8">
           {t.backToGarageSale}
-        </Link>
+        </Button>
       </Section>
     );
   }
@@ -37,7 +35,6 @@ function Product() {
   return (
     <Section>
       <div className="grid lg:grid-cols-2 gap-16 items-start">
-
         <img
           src={product.image}
           alt={product.title[language]}
@@ -64,22 +61,15 @@ function Product() {
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <Link
-              to="/contact"
-              className="rounded-full bg-black text-white px-6 py-3"
-            >
+            <Button to="/contact" variant="primary">
               {translations[language].nav.contact}
-            </Link>
+            </Button>
 
-            <Link
-              to="/garage-sale"
-              className="rounded-full border px-6 py-3"
-            >
+            <Button to="/garage-sale">
               {t.backToGarageSale}
-            </Link>
+            </Button>
           </div>
         </div>
-
       </div>
     </Section>
   );

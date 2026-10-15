@@ -15,7 +15,7 @@ function GarageSale() {
           {t.title}
         </h1>
 
-        <div className="flex flex-wrap gap-8">
+        <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <ProductCard
               key={product.id}

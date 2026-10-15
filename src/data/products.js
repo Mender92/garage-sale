@@ -1,7 +1,6 @@
+import neopreneImage from "../assets/images/neopren.jpeg";
+import babyCotImage from "../assets/images/posteljica.jpeg";
 import guitarImage from "../assets/images/guitar.jpeg";
-import nappyBinImage from "../assets/images/nappy-bin.jpeg";
-import snusImage from "../assets/images/snus.jpeg";
-import thinkpadImage from "../assets/images/thinkpad.jpeg";
 import echoImage from "../assets/images/echo.jpeg";
 import horseImage from "../assets/images/horse.jpeg";
 
@@ -9,8 +8,54 @@ const products = [
   {
     id: 1,
     title: {
+      en: "5 mm Spearfishing Wetsuit + Free Fins",
+      sl: "Neoprenska obleka 5 mm + plavuti gratis",
+    },
+    cardDescription: {
+      en: "5 mm wetsuit, size 4. Fins included for free.",
+      sl: "Obleka debeline 5 mm, velikost 4. Plavuti gratis.",
+    },
+    price: "€150",
+    condition: {
+      en: "Used",
+      sl: "Rabljeno",
+    },
+    image: neopreneImage,
+    description: {
+      en: "5 mm neoprene wetsuit for spearfishing, size 4. Lightly used and well-preserved. Fins are included for free.",
+      sl: "5 mm neoprenska obleka za podvodni ribolov, velikost 4. Malo rabljena in dobro ohranjena. Plavuti so vključene brezplačno.",
+    },
+  },
+  {
+    id: 2,
+    title: {
+      en: "Baby Cot",
+      sl: "Otroška posteljica",
+    },
+    cardDescription: {
+      en: "Solid beech wood, adjustable base and wheels.",
+      sl: "Masivni bukov les, nastavljivo dno in kolesa.",
+    },
+    price: "€150",
+    condition: {
+      en: "Used",
+      sl: "Rabljeno",
+    },
+    image: babyCotImage,
+    description: {
+      en: "Well-preserved SATLER LIP Julija baby cot made of solid beech wood. Includes a 120 × 60 cm mattress. The side rail lowers and slides underneath the cot on rails. The bed base is adjustable to five heights, and the cot has wheels. External dimensions: 70 × 95 × 130 cm.",
+      sl: "Dobro ohranjena otroška posteljica SATLER LIP Julija iz masivnega bukovega lesa. Vključuje vzmetnico velikosti 120 × 60 cm. Spustna stranica se po vodilih spusti in potisne pod posteljico. Dno posteljice je nastavljivo na pet višin, posteljica pa ima tudi kolesa. Zunanje mere: 70 × 95 × 130 cm.",
+    },
+  },
+  {
+    id: 3,
+    title: {
       en: "Electric Guitar",
       sl: "Električna kitara",
+    },
+    cardDescription: {
+      en: "Well-maintained and suitable for players of all levels.",
+      sl: "Dobro ohranjena, primerna za začetnike in izkušene.",
     },
     price: "€300",
     condition: {
@@ -23,70 +68,15 @@ const products = [
       sl: "Dobro ohranjena električna kitara v odličnem stanju. Primerna tako za začetnike kot za izkušene igralce.",
     },
   },
-
-  {
-    id: 2,
-    title: {
-      en: "Tommee Tippee Nappy Bin",
-      sl: "Tommee Tippee koš za plenice",
-    },
-    price: "€20",
-    condition: {
-      en: "Used",
-      sl: "Rabljeno",
-    },
-    image: nappyBinImage,
-    description: {
-      en: "A practical and convenient nappy bin that helps keep unpleasant smells contained. The Twist & Click system individually wraps nappies and can hold up to 33 nappies.",
-      sl: "Priročen koš za plenice, ki pomaga zadrževati neprijetne vonjave. Sistem Twist & Click vsako plenico posebej zavije in ima kapaciteto do 33 plenic.",
-    },
-  },
-
-  {
-    id: 3,
-    title: {
-      en: "Outdare Nicotine Pouches",
-      sl: "Outdare nikotinske vrečke",
-    },
-    price: "€5/can",
-    condition: {
-      en: "New",
-      sl: "Novo",
-    },
-    minimumOrder: {
-      en: "Minimum order: 5 cans",
-      sl: "Minimalno naročilo: 5 škatel",
-    },
-    image: snusImage,
-    description: {
-      en: "Each can contains 20 pouches and is available in 6 mg/pouch. The pouches use plant-based fibres and are tobacco-free. Unopened and in perfect condition. Selling because I accidentally bought nicotine instead of energy pouches.",
-      sl: "OutDare nikotinske vrečke z okusom mentola. V eni škatli je 20 vrečk (6mg nikotina/vrečko), ki vsebujejo rastlinska vlakna in so brez tobaka. Škatle so neodprte in v brezhibnem stanju. Prodajam, ker sem pomotoma kupil nikotinske namesto energijskih vrečk.",
-    },
-  },
-
   {
     id: 4,
     title: {
-      en: "Lenovo ThinkPad X250",
-      sl: "Lenovo ThinkPad X250",
-    },
-    price: "€100",
-    condition: {
-      en: "Used",
-      sl: "Rabljeno",
-    },
-    image: thinkpadImage,
-    description: {
-      en: "Well-maintained Lenovo ThinkPad X250 laptop with a fast SSD for responsive performance. Ideal for work, school, web browsing and everyday use. Selling because I no longer need it.",
-      sl: "Dobro ohranjen prenosnik Lenovo ThinkPad X250 s hitrim SSD diskom za odzivno delovanje. Idealen za delo, šolo, brskanje po spletu in vsakodnevno uporabo. Prodajam, ker ga ne potrebujem več.",
-    },
-  },
-
-  {
-    id: 5,
-    title: {
       en: "Amazon Echo (Alexa)",
       sl: "Amazon Echo (Alexa)",
+    },
+    cardDescription: {
+      en: "Smart speaker with Alexa, Wi-Fi and Bluetooth.",
+      sl: "Pametni zvočnik z Alexo, Wi-Fi in Bluetooth povezavo.",
     },
     price: "€50",
     condition: {
@@ -99,12 +89,15 @@ const products = [
       sl: "Pametni zvočnik z glasovnim upravljanjem za predvajanje glasbe, pridobivanje informacij, nastavljanje opomnikov in upravljanje naprav pametnega doma. Eleganten črn dizajn z Wi-Fi in Bluetooth povezavo. Rabljen, z manjšimi znaki uporabe.",
     },
   },
-
   {
-    id: 6,
+    id: 5,
     title: {
-      en: "Inflatable Horse Toy - NEW!",
-      sl: "Igrača napihljiv konj - NOVO!",
+      en: "Inflatable Horse Toy - NEW",
+      sl: "Igrača napihljiv konj - NOVO",
+    },
+    cardDescription: {
+      en: "New and unused jumping toy with a plush cover.",
+      sl: "Nova, neuporabljena skakalna igrača s plišasto prevleko.",
     },
     price: "€15",
     condition: {
